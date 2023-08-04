@@ -18,11 +18,11 @@ class RentProp(scrapy.Spider):
         for prop in response.css('div.single-room-text'):
             url_resp = response.url
             prop_type = "Not Defined"
-            if "property-for-rent" in url_resp:
+            if "rent" in url_resp:
                 prop_type = "Property for rent"
-            elif "property-for-short-let" in url_resp:
+            elif "short-let" in url_resp:
                 prop_type = "Property for shortlet"
-            elif "properties/land" in url_resp:
+            elif "land" in url_resp:
                 prop_type = "Land"
 
             title = prop.css('div.single-room-text > a > h4::text').get()

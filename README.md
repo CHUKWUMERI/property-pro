@@ -1,10 +1,11 @@
 # Nigerian Housing Dataset
-This is a web scraping project built using Scrapy, a powerful and flexible web scraping framework in Python. The purpose of this scraper is to collect Nigerian property information from the "propertypro.ng" and store it in a structured format.
+This is an ETL project done using Python. Data is extracted from the web using Scrapy, a powerful and flexible web scraping framework in Python. The purpose of this scraper is to collect Nigerian property information from the "propertypro.ng" and store it in a structured format.
 
 # How it works
 The scraper starts by sending requests to the website's search result pages, extracting property details such as title, location, price, number of bedrooms, baths, and toilets, date added, and contact information. For each property, it then follows the "Read More" link to extract additional details about the property.
 
-The scraped data is saved in CSV format to a file. The CSV file contains details for each property, including the "property type" field, which stores the type of the property.
+The scraped data is first saved in CSV format to a file. The CSV file contains details for each property, including the "property type" field, which stores the type of the property.
+After the Extract-Load process has been completed, the Transformation process takes place in a jupyter notebook which is named transformation.ipynb. After the complete transformation has been done, the data will be stored in a SQL database which will be connected to using python. 
 
 # Features
 - Scrapes rental property information from "propertypro.ng" website.
